@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package io.renren.config;
+package com.sjz.config;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;
@@ -29,6 +29,16 @@ import static com.google.common.collect.Lists.newArrayList;
 @EnableSwagger2
 public class SwaggerConfig implements WebMvcConfigurer {
 
+/*    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
+    }*/
+
+
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -37,7 +47,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
             //加了ApiOperation注解的类，才生成接口文档
             .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
             //包下的类，才生成接口文档
-            //.apis(RequestHandlerSelectors.basePackage("io.renren.controller"))
+            .apis(RequestHandlerSelectors.basePackage("com.sjz"))
             .paths(PathSelectors.any())
             .build()
             .securitySchemes(security());
@@ -45,10 +55,10 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("人人开源")
-            .description("renren-fast文档")
-            .termsOfServiceUrl("https://www.renren.io")
-            .version("3.0.0")
+            .title("lunaOA")
+            .description("lunaOA接口文档")
+//            .termsOfServiceUrl("https://www.renren.io")
+            .version("0.0.1")
             .build();
     }
 
