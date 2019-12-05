@@ -1,5 +1,6 @@
 package com.sjz.modules.sys.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -9,9 +10,9 @@ import lombok.Data;
 
 /**
  * 用户表
- * 
+ *
  * @author yang
- * @email 
+ * @email
  * @date 2019-12-04 21:27:42
  */
 @Data
@@ -22,7 +23,7 @@ public class SysUserEntity implements Serializable {
 	/**
 	 * 主键
 	 */
-	@TableId
+	@TableId(type = IdType.AUTO)
 	private Integer userId;
 	/**
 	 * 用户名
@@ -61,7 +62,7 @@ public class SysUserEntity implements Serializable {
 	 */
 	private String email;
 	/**
-	 * 0 未选择 1 男 2 女 
+	 * 0 未选择 1 男 2 女
 	 */
 	private Integer sex;
 	/**

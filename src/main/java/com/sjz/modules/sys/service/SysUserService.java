@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.sjz.common.utils.PageUtils;
 import com.sjz.modules.sys.entity.SysUserEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,5 +19,7 @@ public interface SysUserService extends IService<SysUserEntity> {
     PageUtils queryPage(Map<String, Object> params);
 
     SysUserEntity queryByUserName(String username);
+
+    List<Long> queryAllMenuId(Integer userId);
 }
 

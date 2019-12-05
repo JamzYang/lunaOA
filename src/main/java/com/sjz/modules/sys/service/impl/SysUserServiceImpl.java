@@ -1,6 +1,8 @@
 package com.sjz.modules.sys.service.impl;
 
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -29,6 +31,11 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserDao, SysUserEntity> i
     @Override
     public SysUserEntity queryByUserName(String username) {
         return baseMapper.queryByUserName(username);
+    }
+
+    @Override
+    public List<Long> queryAllMenuId(Integer userId) {
+        return baseMapper.queryAllMenuId(userId);
     }
 
 }

@@ -4,6 +4,7 @@ import com.sjz.common.utils.R;
 import com.sjz.modules.sys.entity.SysUserEntity;
 import com.sjz.modules.sys.service.SysUserService;
 import com.sjz.modules.sys.service.SysUserTokenService;
+import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ public class SysLoginController {
     @Autowired
     private SysUserTokenService tokenService;
 
-
+    @ApiOperation("登录")
     @PostMapping
     public R login(@RequestParam String username, String password){
         if(username == null || password == null){

@@ -1,5 +1,6 @@
 package com.sjz.modules.sys.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -9,9 +10,9 @@ import lombok.Data;
 
 /**
  * 系统用户Token
- * 
+ *
  * @author yang
- * @email 
+ * @email
  * @date 2019-12-04 21:27:42
  */
 @Data
@@ -20,9 +21,9 @@ public class SysUserTokenEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 *
 	 */
-	@TableId
+	@TableId(type = IdType.ID_WORKER)
 	private Integer userId;
 	/**
 	 * token

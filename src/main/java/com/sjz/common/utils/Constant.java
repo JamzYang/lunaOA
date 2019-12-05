@@ -15,7 +15,7 @@ package com.sjz.common.utils;
  */
 public class Constant {
 	/** 超级管理员ID */
-	public static final String SUPER_ADMIN = "1";
+	public static final Integer SUPER_ADMIN = 1;
     /**
      * 当前页码
      */

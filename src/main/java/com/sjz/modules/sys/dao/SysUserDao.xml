@@ -9,7 +9,7 @@
         <result property="username" column="username"/>
         <result property="password" column="password"/>
         <result property="salt" column="salt"/>
-        <result property="img" column="img"/>
+<!--        <result property="img" column="img"/>
         <result property="createTime" column="create_time"/>
         <result property="realname" column="realname"/>
         <result property="num" column="num"/>
@@ -21,25 +21,23 @@
         <result property="status" column="status"/>
         <result property="parentId" column="parent_id"/>
         <result property="lastLoginTime" column="last_login_time"/>
-        <result property="lastLoginIp" column="last_login_ip"/>
+        <result property="lastLoginIp" column="last_login_ip"/>-->
     </resultMap>
 
     <!-- 查询用户的所有权限 -->
- <!--   <select id="queryAllPerms" resultType="string">
+    <select id="queryAllPerms" resultType="string">
         select m.perms from sys_user_role ur
                                 LEFT JOIN sys_role_menu rm on ur.role_id = rm.role_id
                                 LEFT JOIN sys_menu m on rm.menu_id = m.menu_id
         where ur.user_id = #{userId}
-    </select>-->
+    </select>
 
     <!-- 查询用户的所有菜单ID -->
-<!--
     <select id="queryAllMenuId" resultType="long">
         select distinct rm.menu_id from sys_user_role ur
                                             LEFT JOIN sys_role_menu rm on ur.role_id = rm.role_id
         where ur.user_id = #{userId}
     </select>
--->
 
     <select id="queryByUserName" resultType="com.sjz.modules.sys.entity.SysUserEntity">
         select * from sys_user where username = #{username}

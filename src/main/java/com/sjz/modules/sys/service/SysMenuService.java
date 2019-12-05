@@ -1,20 +1,45 @@
+
 package com.sjz.modules.sys.service;
 
+
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.sjz.common.utils.PageUtils;
 import com.sjz.modules.sys.entity.SysMenuEntity;
 
-import java.util.Map;
+import java.util.List;
+
 
 /**
- * 后台菜单表
+ * 菜单管理
  *
- * @author yang
- * @email 
- * @date 2019-12-04 21:27:42
+ * @author Mark sunlightcs@gmail.com
  */
 public interface SysMenuService extends IService<SysMenuEntity> {
 
-    PageUtils queryPage(Map<String, Object> params);
-}
+	/**
+	 * 根据父菜单，查询子菜单
+	 * @param parentId 父菜单ID
+	 * @param menuIdList  用户菜单ID
+	 */
+	List<SysMenuEntity> queryListParentId(Long parentId, List<Long> menuIdList);
 
+	/**
+	 * 根据父菜单，查询子菜单
+	 * @param parentId 父菜单ID
+	 */
+	List<SysMenuEntity> queryListParentId(Long parentId);
+
+	/**
+	 * 获取不包含按钮的菜单列表
+	 */
+	List<SysMenuEntity> queryNotButtonList();
+
+	/**
+	 * 获取用户菜单列表
+	 */
+	List<SysMenuEntity> getUserMenuList(Integer userId);
+
+	/**
+	 * 删除
+	 */
+	void delete(Long menuId);
+}
