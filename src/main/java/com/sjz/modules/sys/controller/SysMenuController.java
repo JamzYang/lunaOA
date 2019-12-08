@@ -15,6 +15,7 @@ import com.sjz.common.utils.R;
 import com.sjz.modules.sys.entity.SysMenuEntity;
 import com.sjz.modules.sys.service.ShiroService;
 import com.sjz.modules.sys.service.SysMenuService;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,7 @@ public class SysMenuController extends AbstractController {
 	/**
 	 * 导航菜单
 	 */
+	@ApiOperation("导航")
 	@GetMapping("/nav")
 	public R nav(){
 		List<SysMenuEntity> menuList = sysMenuService.getUserMenuList(getUserId());

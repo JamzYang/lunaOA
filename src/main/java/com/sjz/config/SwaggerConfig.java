@@ -9,6 +9,7 @@
 package com.sjz.config;
 
 import io.swagger.annotations.ApiOperation;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -17,10 +18,9 @@ import springfox.documentation.builders.ParameterBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.schema.ModelRef;
-import springfox.documentation.service.ApiInfo;
-import springfox.documentation.service.ApiKey;
-import springfox.documentation.service.Parameter;
+import springfox.documentation.service.*;
 import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -45,12 +45,6 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     @Bean
     public Docket createRestApi() {
-        ParameterBuilder tokenPar = new ParameterBuilder();
-        List<Parameter> pars = new ArrayList<>();
-        tokenPar.name("token").description("令牌").modelRef(new ModelRef("string")).parameterType("header").required(false).build();
-        tokenPar.build();
-        pars.add(tokenPar.build());
-
         return new Docket(DocumentationType.SWAGGER_2)
             .apiInfo(apiInfo())
             .select()
@@ -61,7 +55,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
             .paths(PathSelectors.any())
             .build()
             .securitySchemes(security())
-            .globalOperationParameters(pars);
+            .securityContexts(securityContexts());
     }
 
     private ApiInfo apiInfo() {
@@ -77,6 +71,23 @@ public class SwaggerConfig implements WebMvcConfigurer {
         return newArrayList(
             new ApiKey("token", "token", "header")
         );
+    }
+
+
+    private List<SecurityContext> securityContexts() {
+        return newArrayList(
+                SecurityContext.builder()
+                        .securityReferences(defaultAuth())
+                        .forPaths(PathSelectors.regex("^(?!auth).*$"))
+                        .build()
+        );
+    }
+    List<SecurityReference> defaultAuth() {
+        AuthorizationScope authorizationScope = new AuthorizationScope("global", "accessEverything");
+        AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
+        authorizationScopes[0] = authorizationScope;
+        return newArrayList(
+                new SecurityReference("token", authorizationScopes));
     }
 
 }
