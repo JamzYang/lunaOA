@@ -33,16 +33,6 @@ import static com.google.common.collect.Lists.newArrayList;
 @EnableSwagger2
 public class SwaggerConfig implements WebMvcConfigurer {
 
-/*    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build();
-    }*/
-
-
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -69,7 +59,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private List<ApiKey> security() {
         return newArrayList(
-            new ApiKey("token", "token", "header")
+            new ApiKey("Admin-Token", "Admin-Token", "header")
         );
     }
 
@@ -87,7 +77,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
         AuthorizationScope[] authorizationScopes = new AuthorizationScope[1];
         authorizationScopes[0] = authorizationScope;
         return newArrayList(
-                new SecurityReference("token", authorizationScopes));
+                new SecurityReference("Admin-Token", authorizationScopes));
     }
 
 }
