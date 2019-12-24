@@ -1,14 +1,8 @@
-/**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
+
 
 package com.sjz.common.utils;
 
-import com.sjz.common.exception.RRException;
+import com.sjz.common.exception.LunaException;
 import com.sjz.modules.sys.entity.SysUserEntity;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
@@ -17,7 +11,7 @@ import org.apache.shiro.subject.Subject;
 /**
  * Shiro工具类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author
  */
 public class ShiroUtils {
 
@@ -52,7 +46,7 @@ public class ShiroUtils {
 	public static String getKaptcha(String key) {
 		Object kaptcha = getSessionAttribute(key);
 		if(kaptcha == null){
-			throw new RRException("验证码已失效");
+			throw new LunaException("验证码已失效");
 		}
 		getSession().removeAttribute(key);
 		return kaptcha.toString();

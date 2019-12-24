@@ -1,0 +1,909 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title></title>
+</head>
+<body>
+<p height="0pt" width="0pt" align="center">
+<font size="7">目录</font>
+</p>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00002.html">
+<font color="#FF6600">前言</font>
+</a>
+</p>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00003.html">
+<font color="#FF6600">第1章 并发编程的挑战</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00004.html">
+<font color="#FF6600">1.1 上下文切换</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00005.html">
+<font color="#FF6600">1.1.1 多线程一定快吗</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00006.html">
+<font color="#FF6600">1.1.2 测试上下文切换次数和时长</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00007.html">
+<font color="#FF6600">1.1.3 如何减少上下文切换</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00008.html">
+<font color="#FF6600">1.1.4 减少上下文切换实战</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00009.html">
+<font color="#FF6600">1.2 死锁</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00010.html">
+<font color="#FF6600">1.3 资源限制的挑战</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00011.html">
+<font color="#FF6600">1.4 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00012.html">
+<font color="#FF6600">第2章 Java并发机制的底层实现原理</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00013.html">
+<font color="#FF6600">2.1 volatile的应用</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00014.html">
+<font color="#FF6600">2.2 synchronized的实现原理与应用</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00015.html">
+<font color="#FF6600">2.2.1 Java对象头</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00016.html">
+<font color="#FF6600">2.2.2 锁的升级与对比</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00017.html">
+<font color="#FF6600">2.3 原子操作的实现原理</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00018.html">
+<font color="#FF6600">2.4 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00019.html">
+<font color="#FF6600">第3章 Java内存模型</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00020.html">
+<font color="#FF6600">3.1 Java内存模型的基础</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00020.html">
+<font color="#FF6600">3.1.1 并发编程模型的两个关键问题</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00021.html">
+<font color="#FF6600">3.1.2 Java内存模型的抽象结构</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00022.html">
+<font color="#FF6600">3.1.3 从源代码到指令序列的重排序</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00023.html">
+<font color="#FF6600">3.1.4 并发编程模型的分类</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00024.html">
+<font color="#FF6600">3.1.5 happens-before简介</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00025.html">
+<font color="#FF6600">3.2 重排序</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00026.html">
+<font color="#FF6600">3.2.1 数据依赖性</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00027.html">
+<font color="#FF6600">3.2.2 as-if-serial语义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00028.html">
+<font color="#FF6600">3.2.3 程序顺序规则</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00029.html">
+<font color="#FF6600">3.2.4 重排序对多线程的影响</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00030.html">
+<font color="#FF6600">3.3 顺序一致性</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00031.html">
+<font color="#FF6600">3.3.1 数据竞争与顺序一致性</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00032.html">
+<font color="#FF6600">3.3.2 顺序一致性内存模型</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00033.html">
+<font color="#FF6600">3.3.3 同步程序的顺序一致性效果</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00034.html">
+<font color="#FF6600">3.3.4 未同步程序的执行特性</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00035.html">
+<font color="#FF6600">3.4 volatile的内存语义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00036.html">
+<font color="#FF6600">3.4.1 volatile的特性</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00037.html">
+<font color="#FF6600">3.4.2 volatile写-读建立的happens-before关系</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00038.html">
+<font color="#FF6600">3.4.3 volatile写-读的内存语义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00039.html">
+<font color="#FF6600">3.4.4 volatile内存语义的实现</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00040.html">
+<font color="#FF6600">3.4.5 JSR-133为什么要增强volatile的内存语义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00041.html">
+<font color="#FF6600">3.5 锁的内存语义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00042.html">
+<font color="#FF6600">3.5.1 锁的释放-获取建立的happens-before关系</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00043.html">
+<font color="#FF6600">3.5.2 锁的释放和获取的内存语义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00044.html">
+<font color="#FF6600">3.5.3 锁内存语义的实现</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00045.html">
+<font color="#FF6600">3.5.4 concurrent包的实现</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00046.html">
+<font color="#FF6600">3.6 final域的内存语义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00047.html">
+<font color="#FF6600">3.6.1 final域的重排序规则</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00048.html">
+<font color="#FF6600">3.6.2 写final域的重排序规则</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00049.html">
+<font color="#FF6600">3.6.3 读final域的重排序规则</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00050.html">
+<font color="#FF6600">3.6.4 final域为引用类型</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00051.html">
+<font color="#FF6600">3.6.5 为什么final引用不能从构造函数内“溢出”</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00052.html">
+<font color="#FF6600">3.6.6 final语义在处理器中的实现</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00053.html">
+<font color="#FF6600">3.6.7 JSR-133为什么要增强final的语义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00054.html">
+<font color="#FF6600">3.7 happens-before</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00055.html">
+<font color="#FF6600">3.7.1 JMM的设计</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00056.html">
+<font color="#FF6600">3.7.2 happens-before的定义</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00057.html">
+<font color="#FF6600">3.7.3 happens-before规则</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00058.html">
+<font color="#FF6600">3.8 双重检查锁定与延迟初始化</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00059.html">
+<font color="#FF6600">3.8.1 双重检查锁定的由来</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00060.html">
+<font color="#FF6600">3.8.2 问题的根源</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00061.html">
+<font color="#FF6600">3.8.3 基于volatile的解决方案</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00062.html">
+<font color="#FF6600">3.8.4 基于类初始化的解决方案</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00063.html">
+<font color="#FF6600">3.9 Java内存模型综述</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00064.html">
+<font color="#FF6600">3.9.1 处理器的内存模型</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00065.html">
+<font color="#FF6600">3.9.2 各种内存模型之间的关系</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00066.html">
+<font color="#FF6600">3.9.3 JMM的内存可见性保证</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00067.html">
+<font color="#FF6600">3.9.4 JSR-133对旧内存模型的修补</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00068.html">
+<font color="#FF6600">3.10 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00069.html">
+<font color="#FF6600">第4章 Java并发编程基础</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00070.html">
+<font color="#FF6600">4.1 线程简介</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00070.html">
+<font color="#FF6600">4.1.1 什么是线程</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00071.html">
+<font color="#FF6600">4.1.2 为什么要使用多线程</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00072.html">
+<font color="#FF6600">4.1.3 线程优先级</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00073.html">
+<font color="#FF6600">4.1.4 线程的状态</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00074.html">
+<font color="#FF6600">4.1.5 Daemon线程</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00075.html">
+<font color="#FF6600">4.2 启动和终止线程</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00076.html">
+<font color="#FF6600">4.2.1 构造线程</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00077.html">
+<font color="#FF6600">4.2.2 启动线程</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00078.html">
+<font color="#FF6600">4.2.3 理解中断</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00079.html">
+<font color="#FF6600">4.2.4 过期的suspend()、resume()和stop()</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00080.html">
+<font color="#FF6600">4.2.5 安全地终止线程</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00081.html">
+<font color="#FF6600">4.3 线程间通信</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00082.html">
+<font color="#FF6600">4.3.1 volatile和synchronized关键字</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00083.html">
+<font color="#FF6600">4.3.2 等待/通知机制</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00084.html">
+<font color="#FF6600">4.3.3 等待/通知的经典范式</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00085.html">
+<font color="#FF6600">4.3.4 管道输入/输出流</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00086.html">
+<font color="#FF6600">4.3.5 Thread.join()的使用</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00087.html">
+<font color="#FF6600">4.3.6 ThreadLocal的使用</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00088.html">
+<font color="#FF6600">4.4 线程应用实例</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00088.html">
+<font color="#FF6600">4.4.1 等待超时模式</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00089.html">
+<font color="#FF6600">4.4.2 一个简单的数据库连接池示例</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00090.html">
+<font color="#FF6600">4.4.3 线程池技术及其示例</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00091.html">
+<font color="#FF6600">4.4.4 一个基于线程池技术的简单Web服务器</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00092.html">
+<font color="#FF6600">4.5 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00093.html">
+<font color="#FF6600">第5章 Java中的锁</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00094.html">
+<font color="#FF6600">5.1 Lock接口</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00095.html">
+<font color="#FF6600">5.2 队列同步器</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00096.html">
+<font color="#FF6600">5.2.1 队列同步器的接口与示例</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00097.html">
+<font color="#FF6600">5.2.2 队列同步器的实现分析</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00098.html">
+<font color="#FF6600">5.3 重入锁</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00099.html">
+<font color="#FF6600">5.4 读写锁</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00100.html">
+<font color="#FF6600">5.4.1 读写锁的接口与示例</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00101.html">
+<font color="#FF6600">5.4.2 读写锁的实现分析</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00102.html">
+<font color="#FF6600">5.5 LockSupport工具</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00103.html">
+<font color="#FF6600">5.6 Condition接口</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00104.html">
+<font color="#FF6600">5.6.1 Condition接口与示例</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00105.html">
+<font color="#FF6600">5.6.2 Condition的实现分析</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00106.html">
+<font color="#FF6600">5.7 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00107.html">
+<font color="#FF6600">第6章 Java并发容器和框架</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00108.html">
+<font color="#FF6600">6.1 ConcurrentHashMap的实现原理与使用</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00109.html">
+<font color="#FF6600">6.1.1 为什么要使用ConcurrentHashMap</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00110.html">
+<font color="#FF6600">6.1.2 ConcurrentHashMap的结构</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00111.html">
+<font color="#FF6600">6.1.3 ConcurrentHashMap的初始化</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00112.html">
+<font color="#FF6600">6.1.4 定位Segment</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00113.html">
+<font color="#FF6600">6.1.5 ConcurrentHashMap的操作</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00114.html">
+<font color="#FF6600">6.2 ConcurrentLinkedQueue</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00115.html">
+<font color="#FF6600">6.2.1 ConcurrentLinkedQueue的结构</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00116.html">
+<font color="#FF6600">6.2.2 入队列</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00117.html">
+<font color="#FF6600">6.2.3 出队列</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00118.html">
+<font color="#FF6600">6.3 Java中的阻塞队列</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00119.html">
+<font color="#FF6600">6.3.1 什么是阻塞队列</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00120.html">
+<font color="#FF6600">6.3.2 Java里的阻塞队列</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00121.html">
+<font color="#FF6600">6.3.3 阻塞队列的实现原理</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00122.html">
+<font color="#FF6600">6.4 Fork/Join框架</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00123.html">
+<font color="#FF6600">6.4.1 什么是Fork/Join框架</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00124.html">
+<font color="#FF6600">6.4.2 工作窃取算法</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00125.html">
+<font color="#FF6600">6.4.3 Fork/Join框架的设计</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00126.html">
+<font color="#FF6600">6.4.4 使用Fork/Join框架</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00127.html">
+<font color="#FF6600">6.4.5 Fork/Join框架的异常处理</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00128.html">
+<font color="#FF6600">6.4.6 Fork/Join框架的实现原理</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00129.html">
+<font color="#FF6600">6.5 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00130.html">
+<font color="#FF6600">第7章 Java中的13个原子操作类</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00131.html">
+<font color="#FF6600">7.1 原子更新基本类型类</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00132.html">
+<font color="#FF6600">7.2 原子更新数组</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00133.html">
+<font color="#FF6600">7.3 原子更新引用类型</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00134.html">
+<font color="#FF6600">7.4 原子更新字段类</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00135.html">
+<font color="#FF6600">7.5 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00136.html">
+<font color="#FF6600">第8章 Java中的并发工具类</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00137.html">
+<font color="#FF6600">8.1 等待多线程完成的CountDownLatch</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00138.html">
+<font color="#FF6600">8.2 同步屏障CyclicBarrier</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00139.html">
+<font color="#FF6600">8.2.1 CyclicBarrier简介</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00140.html">
+<font color="#FF6600">8.2.2 CyclicBarrier的应用场景</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00141.html">
+<font color="#FF6600">8.2.3 CyclicBarrier和CountDownLatch的区别</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00142.html">
+<font color="#FF6600">8.3 控制并发线程数的Semaphore</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00143.html">
+<font color="#FF6600">8.4 线程间交换数据的Exchanger</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00144.html">
+<font color="#FF6600">8.5 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00145.html">
+<font color="#FF6600">第9章 Java中的线程池</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00146.html">
+<font color="#FF6600">9.1 线程池的实现原理</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00147.html">
+<font color="#FF6600">9.2 线程池的使用</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00147.html">
+<font color="#FF6600">9.2.1 线程池的创建</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00148.html">
+<font color="#FF6600">9.2.2 向线程池提交任务</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00149.html">
+<font color="#FF6600">9.2.3 关闭线程池</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00150.html">
+<font color="#FF6600">9.2.4 合理地配置线程池</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00151.html">
+<font color="#FF6600">9.2.5 线程池的监控</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00152.html">
+<font color="#FF6600">9.3 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00153.html">
+<font color="#FF6600">第10章 Executor框架</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00154.html">
+<font color="#FF6600">10.1 Executor框架简介</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00154.html">
+<font color="#FF6600">10.1.1 Executor框架的两级调度模型</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00155.html">
+<font color="#FF6600">10.1.2 Executor框架的结构与成员</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00156.html">
+<font color="#FF6600">10.2 ThreadPoolExecutor详解</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00157.html">
+<font color="#FF6600">10.2.1 FixedThreadPool详解</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00158.html">
+<font color="#FF6600">10.2.2 SingleThreadExecutor详解</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00159.html">
+<font color="#FF6600">10.2.3 CachedThreadPool详解</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00160.html">
+<font color="#FF6600">10.3 ScheduledThreadPoolExecutor详解</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00161.html">
+<font color="#FF6600">10.3.1 ScheduledThreadPoolExecutor的运行机制</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00162.html">
+<font color="#FF6600">10.3.2 ScheduledThreadPoolExecutor的实现</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00163.html">
+<font color="#FF6600">10.4 FutureTask详解</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00164.html">
+<font color="#FF6600">10.4.1 FutureTask简介</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00165.html">
+<font color="#FF6600">10.4.2 FutureTask的使用</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00166.html">
+<font color="#FF6600">10.4.3 FutureTask的实现</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00167.html">
+<font color="#FF6600">10.5 本章小结</font>
+</a>
+</blockquote>
+<p height="0pt" width="0pt" align="justify">
+<a href="text00168.html">
+<font color="#FF6600">第11章 Java并发编程实践</font>
+</a>
+</p>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00169.html">
+<font color="#FF6600">11.1 生产者和消费者模式</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00170.html">
+<font color="#FF6600">11.1.1 生产者消费者模式实战</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00171.html">
+<font color="#FF6600">11.1.2 多生产者和多消费者场景</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00172.html">
+<font color="#FF6600">11.1.3 线程池与生产消费者模式</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00173.html">
+<font color="#FF6600">11.2 线上问题定位</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00174.html">
+<font color="#FF6600">11.3 性能测试</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00175.html">
+<font color="#FF6600">11.4 异步任务池</font>
+</a>
+</blockquote>
+<blockquote height="0pt" width="0pt" align="justify">
+<a href="text00176.html">
+<font color="#FF6600">11.5 本章小结</font>
+</a>
+</blockquote>
+</body>
+</html>

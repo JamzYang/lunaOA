@@ -1,20 +1,14 @@
-/**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
+
 
 package com.sjz.common.xss;
 
-import com.sjz.common.exception.RRException;
+import com.sjz.common.exception.LunaException;
 import org.apache.commons.lang.StringUtils;
 
 /**
  * SQL过滤
  *
- * @author Mark sunlightcs@gmail.com
+ * @author
  */
 public class SQLFilter {
 
@@ -41,7 +35,7 @@ public class SQLFilter {
         //判断是否包含非法字符
         for(String keyword : keywords){
             if(str.indexOf(keyword) != -1){
-                throw new RRException("包含非法字符");
+                throw new LunaException("包含非法字符");
             }
         }
 
