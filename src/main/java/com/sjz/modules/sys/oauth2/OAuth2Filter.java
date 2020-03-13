@@ -60,7 +60,6 @@ public class OAuth2Filter extends AuthenticatingFilter {
 
             return false;
         }
-
         return executeLogin(request, response);
     }
 

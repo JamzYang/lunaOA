@@ -22,11 +22,12 @@ import com.sjz.common.utils.R;
  * 用户角色对应关系表
  *
  * @author yang
- * @email 
+ * @email
  * @date 2019-12-04 21:27:42
  */
 @RestController
 @RequestMapping("sys/sysuserrole")
+@Deprecated
 public class SysUserRoleController {
     @Autowired
     private SysUserRoleService sysUserRoleService;

@@ -22,11 +22,12 @@ import com.sjz.common.utils.R;
  * 系统用户Token
  *
  * @author yang
- * @email 
+ * @email
  * @date 2019-12-04 21:27:42
  */
 @RestController
 @RequestMapping("sys/sysusertoken")
+@Deprecated
 public class SysUserTokenController {
     @Autowired
     private SysUserTokenService sysUserTokenService;

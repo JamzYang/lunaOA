@@ -9,6 +9,7 @@ import com.sjz.common.utils.R;
 import com.sjz.modules.sys.entity.SysMenuEntity;
 import com.sjz.modules.sys.service.ShiroService;
 import com.sjz.modules.sys.service.SysMenuService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -23,6 +24,7 @@ import java.util.Set;
  *
  * @author
  */
+@Api(tags = "菜单")
 @RestController
 @RequestMapping("/sys/menu")
 public class SysMenuController extends AbstractController {
@@ -45,6 +47,7 @@ public class SysMenuController extends AbstractController {
 	/**
 	 * 所有菜单列表
 	 */
+	@ApiOperation("菜单列表")
 	@GetMapping("/list")
 	@RequiresPermissions("sys:menu:list")
 	public List<SysMenuEntity> list(){
@@ -62,6 +65,7 @@ public class SysMenuController extends AbstractController {
 	/**
 	 * 选择菜单(添加、修改菜单)
 	 */
+	@ApiOperation("添加,修改菜单")
 	@GetMapping("/select")
 	@RequiresPermissions("sys:menu:select")
 	public R select(){
@@ -82,6 +86,7 @@ public class SysMenuController extends AbstractController {
 	/**
 	 * 菜单信息
 	 */
+	@ApiOperation("菜单信息")
 	@GetMapping("/info/{menuId}")
 	@RequiresPermissions("sys:menu:info")
 	public R info(@PathVariable("menuId") Long menuId){

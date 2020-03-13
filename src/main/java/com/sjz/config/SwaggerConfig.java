@@ -46,7 +46,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
         return new ApiInfoBuilder()
             .title("lunaOA")
             .description("lunaOA接口文档")
-//            .termsOfServiceUrl("https://www.renren.io")
+//            .termsOfServiceUrl("")
             .version("0.0.1")
             .build();
     }

@@ -14,4 +14,8 @@
     <select id="queryByToken" resultType="com.sjz.modules.sys.entity.SysUserTokenEntity">
         select * from sys_user_token where token = #{value}
     </select>
+
+    <delete id="delByToken">
+        delete from sys_user_token where token = #{value}
+    </delete>
 </mapper>

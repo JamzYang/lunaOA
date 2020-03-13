@@ -2,9 +2,11 @@ package com.sjz.modules.sys.controller;
 
 import com.sjz.common.utils.R;
 import com.sjz.modules.sys.entity.SysUserEntity;
+import com.sjz.modules.sys.entity.SysUserTokenEntity;
+import com.sjz.modules.sys.oauth2.TokenGenerator;
 import com.sjz.modules.sys.service.SysUserService;
 import com.sjz.modules.sys.service.SysUserTokenService;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,13 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author yang
  * Date 2019/12/4 20:11
  */
 
 @RestController
-@RequestMapping("/login")
 public class SysLoginController {
     @Autowired
     private SysUserService userService;
@@ -26,7 +29,14 @@ public class SysLoginController {
     private SysUserTokenService tokenService;
 
     @ApiOperation("登录")
-    @PostMapping
+//    @ApiImplicitParam(name = "params" , paramType = "body",examples = @Example({
+//            @ExampleProperty(value = "{'user':'id'}", mediaType = "application/json")
+//    }))
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="username",required=true,paramType="query", defaultValue = "admin"),
+            @ApiImplicitParam(name="password",required=true,paramType="query", defaultValue = "12345")
+    })
+    @PostMapping(value = "/login")
     public String login(@RequestParam String username,@RequestParam String password){
         if(username == null || password == null){
 //            return R.error("用户名或密码不能为空");
@@ -234,7 +244,13 @@ public class SysLoginController {
                 "}\n";
     }
 
+    @PostMapping(value = "/logout")
+    public R logout(HttpServletRequest request){
+        String token = request.getHeader("Admin-Token");
+        //tokenService.logout(token);
 
+        return R.ok();
+    }
     private boolean verifyPassword(String inputtedPassword, SysUserEntity userEntity) {
         return userEntity.getPassword().equals(new Sha256Hash(inputtedPassword,userEntity.getSalt()).toHex());
     }

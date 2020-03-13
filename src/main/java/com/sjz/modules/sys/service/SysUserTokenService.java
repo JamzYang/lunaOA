@@ -19,5 +19,11 @@ public interface SysUserTokenService extends IService<SysUserTokenEntity> {
     PageUtils queryPage(Map<String, Object> params);
 
     R createToken(Integer userId);
+
+    /**
+     * 登出: 修改 token值
+     * @param token
+     */
+    void logout(String token);
 }
 

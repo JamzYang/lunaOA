@@ -1,42 +1,42 @@
-package com.sjz.modules.sys.service.impl;
+package com.sjz;
 
+import com.sjz.modules.sys.entity.SysDeptEntity;
 import com.sjz.modules.sys.vo.SysDeptVO;
-import org.springframework.stereotype.Service;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.sjz.common.utils.PageUtils;
-import com.sjz.common.utils.Query;
+/**
+ * @author yang
+ * Date 2020/3/13 9:54
+ */
 
-import com.sjz.modules.sys.dao.SysDeptDao;
-import com.sjz.modules.sys.entity.SysDeptEntity;
-import com.sjz.modules.sys.service.SysDeptService;
-
-
-@Service("sysDeptService")
-public class SysDeptServiceImpl extends ServiceImpl<SysDeptDao, SysDeptEntity> implements SysDeptService {
-
-    @Override
-    public PageUtils queryPage(Map<String, Object> params) {
-        IPage<SysDeptEntity> page = this.page(
-                new Query<SysDeptEntity>().getPage(params),
-                new QueryWrapper<SysDeptEntity>()
-        );
-
-        return new PageUtils(page);
-    }
-
-    @Override
-    public SysDeptVO queryDeptTree() {
-        List<SysDeptEntity> allDepts = baseMapper.queryAll();
+public class ToDeptTreeTest {
+    @Test
+    public void queryDeptTree() {
+        List<SysDeptEntity> allDepts = new ArrayList<>();
+        SysDeptEntity dept1 = new SysDeptEntity();
+        dept1.setDeptId(1);
+        dept1.setPid(0);
+        dept1.setName(dept1.getDeptId()+": 部门");
+        allDepts.add(dept1);
+        for (int i = 2; i < 6; i++) {
+            SysDeptEntity dept2 = new SysDeptEntity();
+            dept2.setDeptId(i);
+            dept2.setPid(1);
+            dept2.setName(dept2.getDeptId()+": 部门");
+            allDepts.add(dept2);
+            for (int j = 1; j < 5; j++) {
+                SysDeptEntity dept3 = new SysDeptEntity();
+                dept3.setDeptId(i*10 + j);
+                dept3.setPid(dept2.getDeptId());
+                dept3.setName(dept3.getDeptId()+": 部门");
+                allDepts.add(dept3);
+            }
+        }
         SysDeptVO deptTree = toDeptTree(allDepts);
-        return deptTree;
+        System.out.println();
     }
 
     private SysDeptVO toDeptTree(List<SysDeptEntity> allDepts) {
@@ -77,6 +77,5 @@ public class SysDeptServiceImpl extends ServiceImpl<SysDeptDao, SysDeptEntity> i
         }
         return children;
     }
-
 
 }
