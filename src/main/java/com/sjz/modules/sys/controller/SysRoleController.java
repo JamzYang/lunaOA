@@ -1,21 +1,20 @@
 package com.sjz.modules.sys.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
+import com.sjz.modules.sys.vo.SysRoleTreeVO;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.sjz.modules.sys.entity.SysRoleEntity;
 import com.sjz.modules.sys.service.SysRoleService;
 import com.sjz.common.utils.PageUtils;
 import com.sjz.common.utils.R;
 
+import javax.validation.Valid;
 
 
 /**
@@ -42,6 +41,26 @@ public class SysRoleController {
         return R.ok().put("page", page);
     }
 
+    @PostMapping("/getAllRoleList")
+    @RequiresPermissions("sys:role:list")
+    public R getAllRoleList(){
+        List<SysRoleTreeVO> roleTree = sysRoleService.queryAll();
+        return R.ok().put("data", roleTree);
+    }
+
+    @PostMapping("/getRoleTypeList")
+    @RequiresPermissions("sys:role:list")
+    public R getRoleTypeList(){
+        List<SysRoleTreeVO> roleTypes = sysRoleService.getRoleTypeList();
+        return R.ok().put("data", roleTypes);
+    }
+
+    @PostMapping("/getRoleByType")
+    @RequiresPermissions("sys:role:list")
+    public R getRoleByType(int roleType){
+        List<SysRoleEntity> roles = sysRoleService.getRoleByType(roleType);
+        return R.ok().put("data", roles);
+    }
 
     /**
      * 信息
@@ -57,9 +76,9 @@ public class SysRoleController {
     /**
      * 保存
      */
-    @RequestMapping("/save")
+    @PostMapping("/save")
     @RequiresPermissions("sys:role:save")
-    public R save(@RequestBody SysRoleEntity sysRole){
+    public R save(@Valid SysRoleEntity sysRole){
 		sysRoleService.save(sysRole);
 
         return R.ok();
@@ -68,9 +87,9 @@ public class SysRoleController {
     /**
      * 修改
      */
-    @RequestMapping("/update")
+    @PostMapping("/update")
     @RequiresPermissions("sys:role:update")
-    public R update(@RequestBody SysRoleEntity sysRole){
+    public R update(@Valid SysRoleEntity sysRole){
 		sysRoleService.updateById(sysRole);
 
         return R.ok();
@@ -79,12 +98,11 @@ public class SysRoleController {
     /**
      * 删除
      */
-    @RequestMapping("/delete")
+    @PostMapping("/delete")
     @RequiresPermissions("sys:role:delete")
-    public R delete(@RequestBody Integer[] roleIds){
-		sysRoleService.removeByIds(Arrays.asList(roleIds));
-
+    public R delete(Integer roleId){
+//		sysRoleService.removeByIds(Arrays.asList(roleIds));
+        sysRoleService.removeById(roleId);
         return R.ok();
     }
-
 }

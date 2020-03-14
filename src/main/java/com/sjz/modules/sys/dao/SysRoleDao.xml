@@ -15,5 +15,7 @@
         <result property="label" column="label"/>
     </resultMap>
 
-
+    <select id="queryAll" resultType="com.sjz.modules.sys.entity.SysRoleEntity">
+        select role_id, role_name, role_type, data_type, label from sys_role
+    </select>
 </mapper>

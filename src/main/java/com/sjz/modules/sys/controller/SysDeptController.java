@@ -1,9 +1,6 @@
 package com.sjz.modules.sys.controller;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.service.additional.query.impl.QueryChainWrapper;
@@ -19,6 +16,7 @@ import com.sjz.modules.sys.service.SysDeptService;
 import com.sjz.common.utils.PageUtils;
 import com.sjz.common.utils.R;
 
+import javax.validation.Valid;
 
 
 /**
@@ -46,7 +44,9 @@ public class SysDeptController {
     public R queryDeptTree(){
         SysDeptVO sysDeptVO = sysDeptService.queryDeptTree();
 //        String data = JSON.toJSONString(sysDeptVO);
-        return R.ok().put("data", sysDeptVO);
+        List<Object> data = new ArrayList<>();
+        data.add(sysDeptVO);
+        return R.ok().put("data", data);
     }
 
 
@@ -65,7 +65,7 @@ public class SysDeptController {
     /**
      * 信息
      */
-    @RequestMapping("/info/{deptId}")
+    @GetMapping("/info/{deptId}")
     @RequiresPermissions("sys:dept:info")
     public R info(@PathVariable("deptId") Integer deptId){
 		SysDeptEntity sysDept = sysDeptService.getById(deptId);
@@ -76,20 +76,19 @@ public class SysDeptController {
     /**
      * 保存
      */
-    @RequestMapping("/save")
+    @PostMapping("/save")
     @RequiresPermissions("sys:dept:save")
     public R save(@RequestBody SysDeptEntity sysDept){
 		sysDeptService.save(sysDept);
-
         return R.ok();
     }
 
     /**
      * 修改
      */
-    @RequestMapping("/update")
+    @PostMapping("/update")
     @RequiresPermissions("sys:dept:update")
-    public R update(@RequestBody SysDeptEntity sysDept){
+    public R update(@Valid SysDeptEntity sysDept){
 		sysDeptService.updateById(sysDept);
 
         return R.ok();

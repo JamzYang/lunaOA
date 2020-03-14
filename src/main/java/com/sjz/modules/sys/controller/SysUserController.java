@@ -14,6 +14,7 @@ import com.sjz.modules.sys.service.SysUserService;
 import com.sjz.common.utils.PageUtils;
 import com.sjz.common.utils.R;
 
+import javax.validation.Valid;
 
 
 /**
@@ -59,9 +60,8 @@ public class SysUserController {
      */
     @RequestMapping("/save")
     @RequiresPermissions("sys:sysuser:save")
-    public R save(@RequestBody SysUserEntity sysUser){
+    public R save(@Valid SysUserEntity sysUser){
 		sysUserService.save(sysUser);
-
         return R.ok();
     }
 

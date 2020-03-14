@@ -7,11 +7,13 @@ import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * 部门表
- * 
+ *
  * @author yang
- * @email 
+ * @email
  * @date 2019-12-04 21:27:42
  */
 @Data
@@ -20,7 +22,7 @@ public class SysDeptEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 *
 	 */
 	@TableId
 	private Integer deptId;
@@ -31,6 +33,7 @@ public class SysDeptEntity implements Serializable {
 	/**
 	 * 部门名称
 	 */
+	@NotBlank(message = "名称不能为空")
 	private String name;
 	/**
 	 * 排序 越大越靠后
