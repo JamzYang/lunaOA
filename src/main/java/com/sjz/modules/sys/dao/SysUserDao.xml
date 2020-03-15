@@ -43,4 +43,14 @@
         select * from sys_user where username = #{username}
     </select>
 
+    <select id="selectPageVo" resultType="com.sjz.modules.sys.vo.SysUserVO">
+        SELECT u.user_id userId, u.username, u.realname, u.dept_id deptId, d.name deptName, ur.role_id roleId,
+               r.role_name roleName, u.parent_id parentId, u2.realname parentName, u.sex, u.mobile,
+               u.position post, u.email, u.create_time createTime, u.img, u.status
+        FROM sys_user u
+                 left join sys_user_role ur on ur.user_id = u.user_id
+                 left join sys_user u2 on u.parent_id = u2.user_id
+                 left join sys_role r on r.role_id = ur.role_id
+                 left join sys_dept d on d.dept_id = u.dept_id
+    </select>
 </mapper>

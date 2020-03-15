@@ -15,5 +15,6 @@ public class SysDeptVO {
     private int pid;
     private int id ;
     private String label;
+    private String name;
     private List<SysDeptVO> children;
 }

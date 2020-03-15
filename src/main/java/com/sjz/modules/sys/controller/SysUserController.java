@@ -26,19 +26,31 @@ import javax.validation.Valid;
  */
 @Api(tags = "用户")
 @RestController
-@RequestMapping("sys/sysuser")
+@RequestMapping("sys/user")
 public class SysUserController {
     @Autowired
     private SysUserService sysUserService;
+
+//    /**
+//     * 列表
+//     */
+//    @ApiOperation("列表")
+//    @PostMapping("/list")
+//    @RequiresPermissions("sys:user:list")
+//    public R list(@RequestParam Map<String, Object> params){
+//        PageUtils page = sysUserService.queryPage(params);
+//
+//        return R.ok().put("page", page);
+//    }
 
     /**
      * 列表
      */
     @ApiOperation("列表")
-    @GetMapping("/list")
-    @RequiresPermissions("sys:sysuser:list")
+    @PostMapping("/list")
+    @RequiresPermissions("sys:user:list")
     public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = sysUserService.queryPage(params);
+        PageUtils page = sysUserService.selectPageVo(params);
 
         return R.ok().put("page", page);
     }
@@ -48,7 +60,7 @@ public class SysUserController {
      * 信息
      */
     @RequestMapping("/info/{userId}")
-    @RequiresPermissions("sys:sysuser:info")
+    @RequiresPermissions("sys:user:info")
     public R info(@PathVariable("userId") Integer userId){
 		SysUserEntity sysUser = sysUserService.getById(userId);
 
@@ -58,8 +70,8 @@ public class SysUserController {
     /**
      * 保存
      */
-    @RequestMapping("/save")
-    @RequiresPermissions("sys:sysuser:save")
+    @PostMapping("/save")
+    @RequiresPermissions("sys:user:save")
     public R save(@Valid SysUserEntity sysUser){
 		sysUserService.save(sysUser);
         return R.ok();
@@ -68,7 +80,7 @@ public class SysUserController {
     /**
      * 修改
      */
-    @RequestMapping("/update")
+    @PostMapping("/update")
     @RequiresPermissions("sys:sysuser:update")
     public R update(@RequestBody SysUserEntity sysUser){
 		sysUserService.updateById(sysUser);

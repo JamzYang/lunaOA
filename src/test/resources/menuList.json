@@ -1,0 +1,869 @@
+{
+  "code": 0,
+  "data": {
+    "data": {
+      "menuType": 0,
+      "parentId": 0,
+      "menuName": "全部",
+      "realm": "crm",
+      "sort": 0,
+      "childMenu": [
+        {
+          "menuType": 1,
+          "parentId": 1,
+          "menuName": "线索管理",
+          "realm": "leads",
+          "sort": 1,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "新建",
+              "realm": "save",
+              "sort": 1,
+              "menuId": 17,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "编辑",
+              "realm": "update",
+              "sort": 1,
+              "menuId": 18,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "查看列表",
+              "realm": "index",
+              "sort": 1,
+              "menuId": 19,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "查看详情",
+              "realm": "read",
+              "sort": 1,
+              "menuId": 20,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "导入",
+              "realm": "excelimport",
+              "sort": 1,
+              "menuId": 21,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "导出",
+              "realm": "excelexport",
+              "sort": 1,
+              "menuId": 22,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "删除",
+              "realm": "delete",
+              "sort": 1,
+              "menuId": 23,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "转移",
+              "realm": "transfer",
+              "sort": 1,
+              "menuId": 24,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 9,
+              "menuName": "转化",
+              "realm": "transform",
+              "sort": 1,
+              "menuId": 25,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 9,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 1,
+          "menuName": "客户管理",
+          "realm": "customer",
+          "sort": 2,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "新建",
+              "realm": "save",
+              "sort": 1,
+              "menuId": 26,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "编辑",
+              "realm": "update",
+              "sort": 1,
+              "menuId": 27,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "查看列表",
+              "realm": "index",
+              "sort": 1,
+              "menuId": 28,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "查看详情",
+              "realm": "read",
+              "sort": 1,
+              "menuId": 29,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "导入",
+              "realm": "excelimport",
+              "sort": 1,
+              "menuId": 30,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "导出",
+              "realm": "excelexport",
+              "sort": 1,
+              "menuId": 31,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "删除",
+              "realm": "delete",
+              "sort": 1,
+              "menuId": 32,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "转移",
+              "realm": "transfer",
+              "sort": 1,
+              "menuId": 33,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "放入公海",
+              "realm": "putinpool",
+              "sort": 1,
+              "menuId": 34,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "锁定/解锁",
+              "realm": "lock",
+              "sort": 1,
+              "menuId": 35,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "编辑团队成员",
+              "realm": "teamsave",
+              "sort": 1,
+              "menuId": 36,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 10,
+              "menuName": "设置成交状态",
+              "realm": "dealStatus",
+              "sort": 0,
+              "menuId": 191,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 10,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 1,
+          "menuName": "联系人管理",
+          "realm": "contacts",
+          "sort": 3,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 11,
+              "menuName": "新建",
+              "realm": "save",
+              "sort": 1,
+              "menuId": 40,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 11,
+              "menuName": "编辑",
+              "realm": "update",
+              "sort": 1,
+              "menuId": 41,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 11,
+              "menuName": "查看列表",
+              "realm": "index",
+              "sort": 1,
+              "menuId": 42,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 11,
+              "menuName": "查看详情",
+              "realm": "read",
+              "sort": 1,
+              "menuId": 43,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 11,
+              "menuName": "删除",
+              "realm": "delete",
+              "sort": 1,
+              "menuId": 44,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 11,
+              "menuName": "转移",
+              "realm": "transfer",
+              "sort": 1,
+              "menuId": 45,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 11,
+              "menuName": "联系人导出",
+              "realm": "excelexport",
+              "sort": 1,
+              "menuId": 107,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 11,
+              "menuName": "联系人导入",
+              "realm": "excelimport",
+              "sort": 1,
+              "menuId": 108,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 11,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 1,
+          "menuName": "商机管理",
+          "realm": "business",
+          "sort": 4,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 12,
+              "menuName": "新建",
+              "realm": "save",
+              "sort": 1,
+              "menuId": 46,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 12,
+              "menuName": "编辑",
+              "realm": "update",
+              "sort": 1,
+              "menuId": 47,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 12,
+              "menuName": "查看列表",
+              "realm": "index",
+              "sort": 1,
+              "menuId": 48,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 12,
+              "menuName": "查看详情",
+              "realm": "read",
+              "sort": 1,
+              "menuId": 49,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 12,
+              "menuName": "删除",
+              "realm": "delete",
+              "sort": 1,
+              "menuId": 50,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 12,
+              "menuName": "转移",
+              "realm": "transfer",
+              "sort": 1,
+              "menuId": 51,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 12,
+              "menuName": "编辑团队成员",
+              "realm": "teamsave",
+              "sort": 1,
+              "menuId": 52,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 12,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 1,
+          "menuName": "合同管理",
+          "realm": "contract",
+          "sort": 5,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 13,
+              "menuName": "新建",
+              "realm": "save",
+              "sort": 1,
+              "menuId": 53,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 13,
+              "menuName": "编辑",
+              "realm": "update",
+              "sort": 1,
+              "menuId": 54,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 13,
+              "menuName": "查看列表",
+              "realm": "index",
+              "sort": 1,
+              "menuId": 55,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 13,
+              "menuName": "查看详情",
+              "realm": "read",
+              "sort": 1,
+              "menuId": 56,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 13,
+              "menuName": "删除",
+              "realm": "delete",
+              "sort": 1,
+              "menuId": 57,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 13,
+              "menuName": "转移",
+              "realm": "transfer",
+              "sort": 1,
+              "menuId": 58,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 13,
+              "menuName": "编辑团队成员",
+              "realm": "teamsave",
+              "sort": 1,
+              "menuId": 59,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 13,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 1,
+          "menuName": "回款管理",
+          "realm": "receivables",
+          "sort": 6,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 14,
+              "menuName": "新建",
+              "realm": "save",
+              "sort": 1,
+              "menuId": 60,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 14,
+              "menuName": "编辑",
+              "realm": "update",
+              "sort": 1,
+              "menuId": 61,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 14,
+              "menuName": "查看列表",
+              "realm": "index",
+              "sort": 1,
+              "menuId": 62,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 14,
+              "menuName": "查看详情",
+              "realm": "read",
+              "sort": 1,
+              "menuId": 63,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 14,
+              "menuName": "删除",
+              "realm": "delete",
+              "sort": 1,
+              "menuId": 64,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 14,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 1,
+          "menuName": "产品管理",
+          "realm": "product",
+          "sort": 7,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 15,
+              "menuName": "新建",
+              "realm": "save",
+              "sort": 1,
+              "menuId": 65,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 15,
+              "menuName": "编辑",
+              "realm": "update",
+              "sort": 1,
+              "menuId": 66,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 15,
+              "menuName": "查看列表",
+              "realm": "index",
+              "sort": 1,
+              "menuId": 67,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 15,
+              "menuName": "查看详情",
+              "realm": "read",
+              "sort": 1,
+              "menuId": 68,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 15,
+              "menuName": "上架/下架",
+              "realm": "status",
+              "sort": 1,
+              "menuId": 69,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 15,
+              "menuName": "产品导入",
+              "realm": "excelimport",
+              "sort": 1,
+              "menuId": 109,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 15,
+              "menuName": "产品导出",
+              "realm": "excelexport",
+              "sort": 1,
+              "menuId": 110,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 15,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 1,
+          "menuName": "公海管理",
+          "realm": "pool",
+          "sort": 4,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 127,
+              "menuName": "查看列表",
+              "realm": "index",
+              "sort": 1,
+              "menuId": 128,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 127,
+              "menuName": "分配",
+              "realm": "distribute",
+              "sort": 1,
+              "menuId": 129,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 127,
+              "menuName": "领取",
+              "realm": "receive",
+              "sort": 1,
+              "menuId": 130,
+              "remarks": null,
+              "status": 1
+            },
+            {
+              "menuType": 3,
+              "parentId": 127,
+              "menuName": "导出",
+              "realm": "excelexport",
+              "sort": 1,
+              "menuId": 131,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 127,
+          "remarks": null,
+          "status": 1
+        }
+      ],
+      "menuId": 1,
+      "remarks": null,
+      "status": 1
+    },
+    "bi": {
+      "menuType": 0,
+      "parentId": 0,
+      "menuName": "全部",
+      "realm": "bi",
+      "sort": 0,
+      "childMenu": [
+        {
+          "menuType": 1,
+          "parentId": 2,
+          "menuName": "业绩目标完成情况",
+          "realm": "achievement",
+          "sort": 0,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 97,
+              "menuName": "查看",
+              "realm": "read",
+              "sort": 0,
+              "menuId": 102,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 97,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 2,
+          "menuName": "销售漏斗",
+          "realm": "business",
+          "sort": 0,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 98,
+              "menuName": "查看",
+              "realm": "read",
+              "sort": 0,
+              "menuId": 103,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 98,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 2,
+          "menuName": "员工客户分析",
+          "realm": "customer",
+          "sort": 0,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 99,
+              "menuName": "查看",
+              "realm": "read",
+              "sort": 0,
+              "menuId": 104,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 99,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 2,
+          "menuName": "员工业绩分析",
+          "realm": "contract",
+          "sort": 0,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 101,
+              "menuName": "查看",
+              "realm": "read",
+              "sort": 0,
+              "menuId": 106,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 101,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 2,
+          "menuName": "产品分析",
+          "realm": "product",
+          "sort": 0,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 117,
+              "menuName": "查看",
+              "realm": "read",
+              "sort": 0,
+              "menuId": 118,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 117,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 2,
+          "menuName": "客户画像分析",
+          "realm": "portrait",
+          "sort": 0,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 123,
+              "menuName": "查看",
+              "realm": "read",
+              "sort": 0,
+              "menuId": 124,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 123,
+          "remarks": null,
+          "status": 1
+        },
+        {
+          "menuType": 1,
+          "parentId": 2,
+          "menuName": "排行榜",
+          "realm": "ranking",
+          "sort": 0,
+          "childMenu": [
+            {
+              "menuType": 3,
+              "parentId": 125,
+              "menuName": "查看",
+              "realm": "read",
+              "sort": 0,
+              "menuId": 126,
+              "remarks": null,
+              "status": 1
+            }
+          ],
+          "menuId": 125,
+          "remarks": null,
+          "status": 1
+        }
+      ],
+      "menuId": 2,
+      "remarks": null,
+      "status": 1
+    }
+  }
+}

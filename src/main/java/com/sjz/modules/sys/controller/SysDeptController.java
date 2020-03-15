@@ -78,7 +78,7 @@ public class SysDeptController {
      */
     @PostMapping("/save")
     @RequiresPermissions("sys:dept:save")
-    public R save(@RequestBody SysDeptEntity sysDept){
+    public R save(@Valid SysDeptEntity sysDept){
 		sysDeptService.save(sysDept);
         return R.ok();
     }

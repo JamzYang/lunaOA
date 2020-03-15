@@ -1,7 +1,10 @@
 package com.sjz.modules.sys.dao;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sjz.modules.sys.entity.SysUserEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.sjz.modules.sys.vo.SysUserVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -31,4 +34,6 @@ public interface SysUserDao extends BaseMapper<SysUserEntity> {
      * 根据用户名，查询系统用户
      */
     SysUserEntity queryByUserName(String username);
+
+    IPage<SysUserVO> selectPageVo(IPage<?> page, Integer state);
 }

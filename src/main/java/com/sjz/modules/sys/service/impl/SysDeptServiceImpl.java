@@ -47,6 +47,7 @@ public class SysDeptServiceImpl extends ServiceImpl<SysDeptDao, SysDeptEntity> i
                 deptTree.setLevel(0);
                 deptTree.setId(dept.getDeptId());
                 deptTree.setLabel(dept.getName());
+                deptTree.setName(dept.getName());
                 deptTree.setPid(0);
                 List<SysDeptVO> children = findChildren(deptTree, allDepts,0);
                 deptTree.setChildren(children);
@@ -64,6 +65,7 @@ public class SysDeptServiceImpl extends ServiceImpl<SysDeptDao, SysDeptEntity> i
                 child.setLevel(deptTree.getLevel()+1);
                 child.setId(dept.getDeptId());
                 child.setLabel(dept.getName());
+                child.setName(dept.getName());
                 child.setPid(deptTree.getId());
                 children.add(child);
             }

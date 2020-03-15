@@ -1,5 +1,3 @@
-
-
 package com.sjz.modules.sys.controller;
 
 import com.sjz.common.annotation.SysLog;
@@ -60,6 +58,19 @@ public class SysMenuController extends AbstractController {
 		}
 
 		return menuList;
+	}
+
+
+	/**
+	 * 按角色类型查菜单
+	 */
+	@ApiOperation("菜单列表")
+	@PostMapping("/getMenuListByType")
+	@RequiresPermissions("sys:menu:list")
+	public R getMenuListByType(){
+		List<SysMenuEntity> menuList = sysMenuService.list();
+
+		return R.ok().put("menuList", menuList);
 	}
 
 	/**
