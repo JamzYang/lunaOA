@@ -1,0 +1,88 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "level": 1,
+      "children": [
+        {
+          "level": 2,
+          "children": [
+            {
+              "level": 3,
+              "name": "华北区",
+              "pid": 2,
+              "id": 4,
+              "label": "华北区"
+            },
+            {
+              "level": 3,
+              "name": "华南区",
+              "pid": 2,
+              "id": 5,
+              "label": "华南区"
+            }
+          ],
+          "name": "市场部",
+          "pid": 1,
+          "id": 2,
+          "label": "市场部"
+        },
+        {
+          "level": 2,
+          "name": "技术部",
+          "pid": 1,
+          "id": 3,
+          "label": "技术部"
+        }
+      ],
+      "name": "办公室",
+      "pid": 0,
+      "id": 1,
+      "label": "办公室"
+    },
+    {
+      "level": 2,
+      "children": [
+        {
+          "level": 3,
+          "name": "华北区",
+          "pid": 2,
+          "id": 4,
+          "label": "华北区"
+        },
+        {
+          "level": 3,
+          "name": "华南区",
+          "pid": 2,
+          "id": 5,
+          "label": "华南区"
+        }
+      ],
+      "name": "市场部",
+      "pid": 1,
+      "id": 2,
+      "label": "市场部"
+    },
+    {
+      "level": 2,
+      "name": "技术部",
+      "pid": 1,
+      "id": 3,
+      "label": "技术部"
+    },
+    {
+      "level": 3,
+      "name": "华北区",
+      "pid": 2,
+      "id": 4,
+      "label": "华北区"
+    },
+    {
+      "level": 3,
+      "name": "华南区",
+      "pid": 2,
+      "id": 5,
+      "label": "华南区"
+    }
+  ]
+}

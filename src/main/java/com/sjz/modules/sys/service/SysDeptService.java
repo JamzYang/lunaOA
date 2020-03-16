@@ -20,6 +20,6 @@ public interface SysDeptService extends IService<SysDeptEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
     SysDeptVO queryDeptTree();
-
+    List<SysDeptVO> queryAll();
 }
 

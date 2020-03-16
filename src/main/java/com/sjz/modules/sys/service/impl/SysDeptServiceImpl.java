@@ -39,6 +39,20 @@ public class SysDeptServiceImpl extends ServiceImpl<SysDeptDao, SysDeptEntity> i
         return deptTree;
     }
 
+    @Override
+    public List<SysDeptVO> queryAll() {
+        List<SysDeptEntity> entities = baseMapper.queryAll();
+        List<SysDeptVO> voList = new ArrayList<>();
+        entities.forEach(entity -> {
+            SysDeptVO vo = new SysDeptVO();
+            voList.add(vo);
+            vo.setId(entity.getDeptId());
+            vo.setLabel(entity.getName());
+            vo.setName(entity.getName());
+        });
+        return voList;
+    }
+
     private SysDeptVO toDeptTree(List<SysDeptEntity> allDepts) {
         SysDeptVO deptTree = new SysDeptVO();
 

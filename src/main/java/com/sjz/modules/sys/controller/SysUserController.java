@@ -3,6 +3,8 @@ package com.sjz.modules.sys.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.alibaba.fastjson.JSONObject;
+import com.sjz.common.utils.PageUtils2;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -50,11 +52,9 @@ public class SysUserController {
     @PostMapping("/list")
     @RequiresPermissions("sys:user:list")
     public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = sysUserService.selectPageVo(params);
-
-        return R.ok().put("page", page);
+        PageUtils2 page = sysUserService.selectPageVo(params);
+        return R.ok().put("data", page);
     }
-
 
     /**
      * 信息

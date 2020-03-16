@@ -20,7 +20,8 @@ import com.sjz.modules.sys.service.SysUserTokenService;
 
 @Service("sysUserTokenService")
 public class SysUserTokenServiceImpl extends ServiceImpl<SysUserTokenDao, SysUserTokenEntity> implements SysUserTokenService {
-    private long EXPIRE = 60 * 30;
+    //token过期时间
+    private long EXPIRE = 60 * 30 *48;
 
     @Autowired
     private SysUserTokenDao sysUserTokenDao;

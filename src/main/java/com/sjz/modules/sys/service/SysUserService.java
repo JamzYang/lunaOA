@@ -3,6 +3,7 @@ package com.sjz.modules.sys.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.sjz.common.utils.PageUtils;
+import com.sjz.common.utils.PageUtils2;
 import com.sjz.modules.sys.entity.SysUserEntity;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.Map;
 public interface SysUserService extends IService<SysUserEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
-    PageUtils selectPageVo(Map<String, Object> params);
+    PageUtils2 selectPageVo(Map<String, Object> params);
 
     SysUserEntity queryByUserName(String username);
 

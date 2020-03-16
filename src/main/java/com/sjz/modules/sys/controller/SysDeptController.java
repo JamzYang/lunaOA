@@ -41,14 +41,30 @@ public class SysDeptController {
     @ApiOperation("部门树")
     @PostMapping("queryDeptTree")
     @RequiresPermissions("sys:dept:list")
-    public R queryDeptTree(){
-        SysDeptVO sysDeptVO = sysDeptService.queryDeptTree();
+    public R queryDeptTree(@RequestParam Map<String, Object> params){
+        if("tree".equals(params.get("type"))){
+            SysDeptVO sysDeptVO = sysDeptService.queryDeptTree();
 //        String data = JSON.toJSONString(sysDeptVO);
-        List<Object> data = new ArrayList<>();
-        data.add(sysDeptVO);
-        return R.ok().put("data", data);
+            List<Object> data = new ArrayList<>();
+            data.add(sysDeptVO);
+            return R.ok().put("data", data);
+        }else{
+            List<SysDeptVO> vos = sysDeptService.queryAll();
+            return R.ok().put("data", vos);
+        }
+
     }
 
+
+    /**
+     * 全部部门
+     */
+    @PostMapping("/list")
+    @RequiresPermissions("sys:dept:list")
+    public R queryAll(){
+        List<SysDeptVO> vos = sysDeptService.queryAll();
+        return R.ok().put("data", vos);
+    }
 
     /**
      * 列表

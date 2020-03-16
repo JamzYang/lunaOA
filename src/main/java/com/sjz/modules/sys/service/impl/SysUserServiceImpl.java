@@ -1,6 +1,7 @@
 package com.sjz.modules.sys.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sjz.common.utils.PageUtils2;
 import com.sjz.modules.sys.vo.SysUserVO;
 import org.springframework.stereotype.Service;
 
@@ -30,9 +31,10 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserDao, SysUserEntity> i
     }
 
     @Override
-    public PageUtils selectPageVo(Map<String, Object> params) {
+    public PageUtils2 selectPageVo(Map<String, Object> params) {
         IPage<SysUserVO> page = baseMapper.selectPageVo(new Query<SysUserEntity>().getPage(params), 1);
-        return new PageUtils(page);
+//        return new PageUtils(page);
+        return new PageUtils2(page);
     }
 
 
