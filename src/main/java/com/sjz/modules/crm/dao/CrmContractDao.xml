@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sjz.modules.crm.dao.CrmContractDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.sjz.modules.crm.entity.CrmContractEntity" id="crmContractMap">
+        <result property="contractId" column="contract_id"/>
+        <result property="customerId" column="customer_id"/>
+        <result property="businessId" column="business_id"/>
+        <result property="checkStatus" column="check_status"/>
+        <result property="examineRecordId" column="examine_record_id"/>
+        <result property="signDate" column="sign_date"/>
+        <result property="orderDate" column="order_date"/>
+        <result property="remindDate" column="remind_date"/>
+        <result property="price" column="price"/>
+        <result property="payTime" column="pay_time"/>
+        <result property="payment" column="payment"/>
+        <result property="accountId" column="account_id"/>
+        <result property="createUserId" column="create_user_id"/>
+        <result property="ownerUserId" column="owner_user_id"/>
+        <result property="accountantId" column="accountant_id"/>
+        <result property="startDate" column="start_date"/>
+        <result property="endDate" column="end_date"/>
+        <result property="num" column="num"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="money" column="money"/>
+        <result property="discountRate" column="discount_rate"/>
+        <result property="totalPrice" column="total_price"/>
+        <result property="types" column="types"/>
+        <result property="paymentType" column="payment_type"/>
+        <result property="batchId" column="batch_id"/>
+        <result property="roUserId" column="ro_user_id"/>
+        <result property="rwUserId" column="rw_user_id"/>
+        <result property="contactsId" column="contacts_id"/>
+        <result property="remark" column="remark"/>
+        <result property="companyUserId" column="company_user_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="renewal" column="renewal"/>
+    </resultMap>
+
+
+</mapper>

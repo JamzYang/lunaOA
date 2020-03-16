@@ -8,6 +8,14 @@ package com.sjz.common.utils;
  * @author
  */
 public class Constant {
+    private final int SCENE_TYPE_CLUE       = 1;
+    private final int SCENE_TYPE_CUSTOMER   = 2;
+    private final int SCENE_TYPE_LINKMAN    = 3;
+    private final int SCENE_TYPE_PRODUCT    = 4;
+    private final int SCENE_TYPE_CHANCE     = 5;
+    private final int SCENE_TYPE_CONTRACT   = 6;
+
+
 	/** 超级管理员ID */
 	public static final Integer SUPER_ADMIN = 1;
     /**

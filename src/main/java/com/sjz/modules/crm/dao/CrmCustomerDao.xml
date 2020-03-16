@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sjz.modules.crm.dao.CrmCustomerDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.sjz.modules.crm.entity.CrmCustomerEntity" id="crmCustomerMap">
+        <result property="customerId" column="customer_id"/>
+        <result property="customerName" column="customer_name"/>
+        <result property="followup" column="followup"/>
+        <result property="isLock" column="is_lock"/>
+        <result property="nextTime" column="next_time"/>
+        <result property="dealStatus" column="deal_status"/>
+        <result property="mobile" column="mobile"/>
+        <result property="telephone" column="telephone"/>
+        <result property="website" column="website"/>
+        <result property="remark" column="remark"/>
+        <result property="createUserId" column="create_user_id"/>
+        <result property="ownerUserId" column="owner_user_id"/>
+        <result property="roUserId" column="ro_user_id"/>
+        <result property="rwUserId" column="rw_user_id"/>
+        <result property="address" column="address"/>
+        <result property="location" column="location"/>
+        <result property="detailAddress" column="detail_address"/>
+        <result property="lng" column="lng"/>
+        <result property="lat" column="lat"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="batchId" column="batch_id"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sjz.modules.sys.dao.SysFieldDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.sjz.modules.sys.entity.SysFieldEntity" id="sysFieldMap">
+        <result property="fieldId" column="field_id"/>
+        <result property="fieldName" column="field_name"/>
+        <result property="name" column="name"/>
+        <result property="type" column="type"/>
+        <result property="label" column="label"/>
+        <result property="remark" column="remark"/>
+        <result property="inputTips" column="input_tips"/>
+        <result property="maxLength" column="max_length"/>
+        <result property="defaultValue" column="default_value"/>
+        <result property="isUnique" column="is_unique"/>
+        <result property="isNull" column="is_null"/>
+        <result property="sorting" column="sorting"/>
+        <result property="options" column="options"/>
+        <result property="operating" column="operating"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="examineCategoryId" column="examine_category_id"/>
+        <result property="fieldType" column="field_type"/>
+        <result property="relevant" column="relevant"/>
+    </resultMap>
+
+
+</mapper>
