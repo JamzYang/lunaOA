@@ -8,7 +8,7 @@
         <result property="fieldId" column="field_id"/>
         <result property="fieldName" column="field_name"/>
         <result property="name" column="name"/>
-        <result property="type" column="type"/>
+        <result property="formType" column="form_type"/>
         <result property="label" column="label"/>
         <result property="remark" column="remark"/>
         <result property="inputTips" column="input_tips"/>
@@ -25,5 +25,7 @@
         <result property="relevant" column="relevant"/>
     </resultMap>
 
-
+    <select id="queryListHead" resultMap="sysFieldMap">
+        select field_id, field_name, name, form_type, label, remark, input_tips, max_length, default_value, is_unique, is_null, sorting, options, operating, update_time, examine_category_id, field_type, relevant from sys_field where label = #{label}
+    </select>
 </mapper>

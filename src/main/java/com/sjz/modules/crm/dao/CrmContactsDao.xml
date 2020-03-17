@@ -23,4 +23,29 @@
     </resultMap>
 
 
+    <resultMap type="com.sjz.modules.crm.vo.CrmContactsVO" id="crmContactsVo">
+        <result property="contactsId" column="contacts_id"/>
+        <result property="name" column="name"/>
+        <result property="nextTime" column="next_time"/>
+        <result property="mobile" column="mobile"/>
+        <result property="telephone" column="telephone"/>
+        <result property="email" column="email"/>
+        <result property="post" column="post"/>
+        <result property="customerId" column="customer_id"/>
+        <result property="customerName" column="customer_name"/>
+        <result property="address" column="address"/>
+        <result property="remark" column="remark"/>
+        <result property="createUserId" column="create_user_id"/>
+        <result property="ownerUserId" column="owner_user_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="batchId" column="batch_id"/>
+    </resultMap>
+
+    <select id="selectPageVo" resultMap="crmContactsVo">
+        SELECT a.contacts_id, a.name, a.next_time, a.mobile, a.telephone, a.email, a.post, b.customer_name, a.customer_id, a.address, a.remark, a.create_user_id, a.owner_user_id, a.create_time, a.update_time, a.batch_id
+        FROM crm_contacts a
+                 left join crm_customer b  on a.customer_id = b.customer_id
+
+    </select>
 </mapper>

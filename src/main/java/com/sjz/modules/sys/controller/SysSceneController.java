@@ -41,7 +41,7 @@ public class SysSceneController {
      * 列表
      */
 //    @PostMapping("/list")
-////    @RequiresPermissions("sys:sysscene:list")
+////    @RequiresPermissions("sys:scene:list")
 //    public R list(@RequestParam Map<String, Object> params){
 //        PageUtils page = sysSceneService.queryPage(params);
 //
@@ -53,7 +53,7 @@ public class SysSceneController {
      * 信息
      */
     @PostMapping("/info/{sceneId}")
-//    @RequiresPermissions("sys:sysscene:info")
+    @RequiresPermissions("sys:scene:info")
     public R info(@PathVariable("sceneId") Integer sceneId){
 		SysSceneEntity sysScene = sysSceneService.getById(sceneId);
 
@@ -64,7 +64,7 @@ public class SysSceneController {
      * 保存
      */
     @PostMapping("/save")
-//    @RequiresPermissions("sys:scene:save")
+    @RequiresPermissions("sys:scene:save")
     public R save(@RequestBody SysSceneEntity sysScene){
 		sysSceneService.save(sysScene);
 
@@ -75,7 +75,7 @@ public class SysSceneController {
      * 修改
      */
     @PostMapping("/update")
-//    @RequiresPermissions("sys:scene:update")
+    @RequiresPermissions("sys:scene:update")
     public R update(@RequestBody SysSceneEntity sysScene){
 		sysSceneService.updateById(sysScene);
 
@@ -86,7 +86,7 @@ public class SysSceneController {
      * 删除
      */
     @PostMapping("/delete")
-//    @RequiresPermissions("sys:scene:delete")
+    @RequiresPermissions("sys:scene:delete")
     public R delete(@RequestBody Integer[] sceneIds){
 		sysSceneService.removeByIds(Arrays.asList(sceneIds));
         return R.ok();

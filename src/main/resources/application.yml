@@ -33,8 +33,8 @@ spring:
 
 #mybatis
 mybatis-plus:
-#  mapper-locations: classpath*:/mapper/**/*.xml
-  mapper-locations: classpath:/com/sjz/modules/sys/dao/*.xml
+#  mapper-locations: classpath*:/com/sjz/modules/**/*.xml
+  mapper-locations: classpath:/com/sjz/modules/sys/dao/*.xml, classpath:/com/sjz/modules/crm/dao/*.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.sjz.modules.*.entity
   global-config:

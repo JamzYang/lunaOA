@@ -4,14 +4,17 @@ import com.sjz.modules.sys.entity.SysFieldEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * 自定义字段表
- * 
+ *
  * @author yang
- * @email 
+ * @email
  * @date 2020-03-16 19:37:53
  */
 @Mapper
 public interface SysFieldDao extends BaseMapper<SysFieldEntity> {
-	
+
+    List<SysFieldEntity> queryListHead(int label);
 }
