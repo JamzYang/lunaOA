@@ -51,7 +51,6 @@ public class CrmCustomerController {
     @RequiresPermissions("crm:customer:info")
     public R info(Integer customerId){
 		CrmCustomerEntity crmCustomer = crmCustomerService.getById(customerId);
-
         return R.ok().put("data", crmCustomer);
     }
 

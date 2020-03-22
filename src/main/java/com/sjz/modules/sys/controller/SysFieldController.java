@@ -1,11 +1,17 @@
 package com.sjz.modules.sys.controller;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.sjz.modules.crm.entity.CrmCustomerEntity;
+import com.sjz.modules.crm.service.CrmCustomerService;
+import org.apache.commons.beanutils.BeanUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +36,9 @@ public class SysFieldController {
     @Autowired
     private SysFieldService sysFieldService;
 
+    @Autowired
+    private CrmCustomerService crmCustomerService;
+
     /**
      * 查表头
      */
@@ -48,8 +57,72 @@ public class SysFieldController {
      */
     @RequestMapping("/queryField")
     @RequiresPermissions("sys:field:list")
-    public R list(int label, int id){
-        List<SysFieldEntity> list = sysFieldService.queryListHead(label);
+    public R list(Integer label, Integer id){
+       List<SysFieldEntity> list = sysFieldService.queryListHead(label);
+        if (id != null){
+            if ("1".equals(label)){
+//                recordList = crmLeadsService.queryField(id);
+            }
+            if (2 == label){
+                CrmCustomerEntity customerEntity = crmCustomerService.getById(id);
+//                list.forEach(field ->{
+//                    String fieldName = field.getFieldName();
+//                    try {
+//                        String value = BeanUtils.getProperty(customerEntity, fieldName);
+//                        field.setValue(value);
+//                    } catch (IllegalAccessException e) {
+//                        e.printStackTrace();
+//                    } catch (InvocationTargetException e) {
+//                        e.printStackTrace();
+//                    } catch (NoSuchMethodException e) {
+//                        e.printStackTrace();
+//                    }
+//                });
+                for (SysFieldEntity field : list) {
+                    String fieldName = field.getFieldName();
+                    try {
+                        String value = BeanUtils.getProperty(customerEntity, fieldName);
+                        field.setValue(value);
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                        continue;
+                    } catch (InvocationTargetException e) {
+                        e.printStackTrace();
+                        continue;
+                    } catch (NoSuchMethodException e) {
+                        e.printStackTrace();
+                        continue;
+                    }
+                }
+            }
+            if ("3".equals(label)){
+//                recordList = crmContactsService.queryField(id);
+            }
+            if ("4".equals(label)){
+//                recordList = crmProductService.queryField(id);
+            }
+            if ("5".equals(label)){
+//                recordList = crmBusinessService.queryField(id);
+            }
+            if ("6".equals(label)){
+//                recordList = crmContractService.queryField(id);
+            }
+            if ("7".equals(label)){
+//                recordList = crmReceivablesService.queryField(id);
+            }
+            if ("8".equals(label)){
+//                recordList = crmReceivablesPlanService.queryField(id);
+            }
+            if("10".equals(label)){
+//                recordList = oaExamineCategoryService.queryField(id);
+            }
+        }else {
+            if ("8".equals(label)){
+//                recordList = crmReceivablesPlanService.queryField();
+            }else {
+//                recordList = adminFieldService.queryAddField(Integer.valueOf(label));
+            }
+        }
         return R.ok().put("data", list);
     }
 

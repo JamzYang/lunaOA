@@ -13,6 +13,14 @@ import java.util.List;
  */
 
 public class ToDeptTreeTest {
+
+    @Test
+    public void test11(){
+        Integer value = 2;
+        System.out.println("2".equals(value));
+    }
+
+
     @Test
     public void queryDeptTree() {
         List<SysDeptEntity> allDepts = new ArrayList<>();

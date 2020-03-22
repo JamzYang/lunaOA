@@ -93,4 +93,8 @@ public class SysFieldEntity implements Serializable {
 	 */
 	private Integer relevant;
 
+	/**
+	 * 字段值
+	 */
+	private String value;
 }

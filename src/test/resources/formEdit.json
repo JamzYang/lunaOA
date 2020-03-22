@@ -1,0 +1,168 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "fieldId": 10,
+      "formType": "text",
+      "isNull": 1,
+      "name": "客户名称",
+      "options": null,
+      "isUnique": 1,
+      "inputTips": null,
+      "type": 1,
+      "value": "百度",
+      "fieldType": 1,
+      "fieldName": "customer_name",
+      "setting": []
+    },
+    {
+      "fieldId": 11,
+      "formType": "mobile",
+      "isNull": 0,
+      "name": "手机",
+      "options": null,
+      "isUnique": 0,
+      "inputTips": null,
+      "type": 7,
+      "value": "",
+      "fieldType": 1,
+      "fieldName": "mobile",
+      "setting": []
+    },
+    {
+      "fieldId": 12,
+      "formType": "text",
+      "isNull": 0,
+      "name": "电话",
+      "options": null,
+      "isUnique": 0,
+      "inputTips": null,
+      "type": 1,
+      "value": "",
+      "fieldType": 1,
+      "fieldName": "telephone",
+      "setting": []
+    },
+    {
+      "fieldId": 18,
+      "formType": "select",
+      "isNull": 0,
+      "name": "客户来源",
+      "options": "促销,搜索引擎,广告,转介绍,线上注册,线上询价,预约上门,陌拜,电话咨询,邮件咨询",
+      "isUnique": 0,
+      "inputTips": null,
+      "type": 3,
+      "value": "转介绍",
+      "fieldType": 0,
+      "fieldName": "客户来源",
+      "setting": [
+        "促销",
+        "搜索引擎",
+        "广告",
+        "转介绍",
+        "线上注册",
+        "线上询价",
+        "预约上门",
+        "陌拜",
+        "电话咨询",
+        "邮件咨询"
+      ]
+    },
+    {
+      "fieldId": 19,
+      "formType": "select",
+      "isNull": 0,
+      "name": "客户行业",
+      "options": "IT,金融业,房地产,商业服务,运输/物流,生产,政府,文化传媒",
+      "isUnique": 0,
+      "inputTips": null,
+      "type": 3,
+      "value": "IT",
+      "fieldType": 0,
+      "fieldName": "客户行业",
+      "setting": [
+        "IT",
+        "金融业",
+        "房地产",
+        "商业服务",
+        "运输/物流",
+        "生产",
+        "政府",
+        "文化传媒"
+      ]
+    },
+    {
+      "fieldId": 17,
+      "formType": "select",
+      "isNull": 0,
+      "name": "客户级别",
+      "options": "A（重点客户）,B（普通客户）,C（非优先客户）",
+      "isUnique": 0,
+      "inputTips": null,
+      "type": 3,
+      "value": "A（重点客户）",
+      "fieldType": 0,
+      "fieldName": "客户级别",
+      "setting": [
+        "A（重点客户）",
+        "B（普通客户）",
+        "C（非优先客户）"
+      ]
+    },
+    {
+      "fieldId": 13,
+      "formType": "text",
+      "isNull": 0,
+      "name": "网址",
+      "options": null,
+      "isUnique": 0,
+      "inputTips": null,
+      "type": 1,
+      "value": "",
+      "fieldType": 1,
+      "fieldName": "website",
+      "setting": []
+    },
+    {
+      "fieldId": 15,
+      "formType": "datetime",
+      "isNull": 0,
+      "name": "下次联系时间",
+      "options": null,
+      "isUnique": 0,
+      "inputTips": null,
+      "type": 13,
+      "value": "2020-03-17 18:31:37",
+      "fieldType": 1,
+      "fieldName": "next_time",
+      "setting": []
+    },
+    {
+      "fieldId": 16,
+      "formType": "text",
+      "isNull": 0,
+      "name": "备注",
+      "options": null,
+      "isUnique": 0,
+      "inputTips": null,
+      "type": 1,
+      "value": "",
+      "fieldType": 1,
+      "fieldName": "remark",
+      "setting": []
+    },
+    {
+      "formType": "map_address",
+      "fieldName": "map_address",
+      "isNull": 0,
+      "name": "地区定位",
+      "value": {
+        "address": "",
+        "lng": "114.018802",
+        "detailAddress": "河南省漯河市郾城区孟庙镇锦绣淞江",
+        "location": "",
+        "lat": "33.608034"
+      }
+    }
+  ]
+}
