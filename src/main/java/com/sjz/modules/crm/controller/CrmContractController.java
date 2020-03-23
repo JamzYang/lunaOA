@@ -22,11 +22,11 @@ import com.sjz.common.utils.R;
  * 合同表
  *
  * @author yang
- * @email 
+ * @email
  * @date 2020-03-16 19:38:43
  */
 @RestController
-@RequestMapping("crm/crmcontract")
+@RequestMapping("crm/contract")
 public class CrmContractController {
     @Autowired
     private CrmContractService crmContractService;
@@ -35,11 +35,11 @@ public class CrmContractController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("crm:crmcontract:list")
+    @RequiresPermissions("crm:contract:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = crmContractService.queryPage(params);
 
-        return R.ok().put("page", page);
+        return R.ok().put("data", page);
     }
 
 
@@ -47,7 +47,7 @@ public class CrmContractController {
      * 信息
      */
     @RequestMapping("/info/{contractId}")
-    @RequiresPermissions("crm:crmcontract:info")
+    @RequiresPermissions("crm:contract:info")
     public R info(@PathVariable("contractId") Integer contractId){
 		CrmContractEntity crmContract = crmContractService.getById(contractId);
 
@@ -58,7 +58,7 @@ public class CrmContractController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("crm:crmcontract:save")
+    @RequiresPermissions("crm:contract:save")
     public R save(@RequestBody CrmContractEntity crmContract){
 		crmContractService.save(crmContract);
 
@@ -69,7 +69,7 @@ public class CrmContractController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("crm:crmcontract:update")
+    @RequiresPermissions("crm:contract:update")
     public R update(@RequestBody CrmContractEntity crmContract){
 		crmContractService.updateById(crmContract);
 
@@ -80,7 +80,7 @@ public class CrmContractController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("crm:crmcontract:delete")
+    @RequiresPermissions("crm:contract:delete")
     public R delete(@RequestBody Integer[] contractIds){
 		crmContractService.removeByIds(Arrays.asList(contractIds));
 

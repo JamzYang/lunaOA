@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,7 +40,6 @@ public class CrmCustomerController {
     @RequiresPermissions("crm:customer:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = crmCustomerService.queryPage(params);
-
         return R.ok().put("data", page);
     }
 
@@ -60,9 +60,11 @@ public class CrmCustomerController {
     @RequestMapping("/save")
     @RequiresPermissions("crm:customer:save")
     public R save(@RequestBody JSONObject json){
-        Object entity = json.get("entity");
-//        crmCustomerService.save(crmCustomer);
-
+        Object ob = json.get("entity");
+        CrmCustomerEntity entity = new CrmCustomerEntity();
+        BeanUtils.copyProperties(ob,entity);
+//        CrmCustomerEntity entity = (CrmCustomerEntity)json.get("entity");
+        crmCustomerService.save(entity);
         return R.ok();
     }
 
@@ -73,7 +75,6 @@ public class CrmCustomerController {
     @RequiresPermissions("crm:customer:update")
     public R update(@RequestBody CrmCustomerEntity crmCustomer){
 		crmCustomerService.updateById(crmCustomer);
-
         return R.ok();
     }
 

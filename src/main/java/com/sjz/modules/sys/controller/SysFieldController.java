@@ -9,7 +9,11 @@ import java.util.Map;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.sjz.modules.crm.entity.CrmContactsEntity;
+import com.sjz.modules.crm.entity.CrmContractEntity;
 import com.sjz.modules.crm.entity.CrmCustomerEntity;
+import com.sjz.modules.crm.service.CrmContactsService;
+import com.sjz.modules.crm.service.CrmContractService;
 import com.sjz.modules.crm.service.CrmCustomerService;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -35,9 +39,12 @@ import com.sjz.common.utils.R;
 public class SysFieldController {
     @Autowired
     private SysFieldService sysFieldService;
-
     @Autowired
     private CrmCustomerService crmCustomerService;
+    @Autowired
+    private CrmContactsService crmContactsService;
+    @Autowired
+    private CrmContractService crmContractService;
 
     /**
      * 查表头
@@ -64,39 +71,12 @@ public class SysFieldController {
 //                recordList = crmLeadsService.queryField(id);
             }
             if (2 == label){
-                CrmCustomerEntity customerEntity = crmCustomerService.getById(id);
-//                list.forEach(field ->{
-//                    String fieldName = field.getFieldName();
-//                    try {
-//                        String value = BeanUtils.getProperty(customerEntity, fieldName);
-//                        field.setValue(value);
-//                    } catch (IllegalAccessException e) {
-//                        e.printStackTrace();
-//                    } catch (InvocationTargetException e) {
-//                        e.printStackTrace();
-//                    } catch (NoSuchMethodException e) {
-//                        e.printStackTrace();
-//                    }
-//                });
-                for (SysFieldEntity field : list) {
-                    String fieldName = field.getFieldName();
-                    try {
-                        String value = BeanUtils.getProperty(customerEntity, fieldName);
-                        field.setValue(value);
-                    } catch (IllegalAccessException e) {
-                        e.printStackTrace();
-                        continue;
-                    } catch (InvocationTargetException e) {
-                        e.printStackTrace();
-                        continue;
-                    } catch (NoSuchMethodException e) {
-                        e.printStackTrace();
-                        continue;
-                    }
-                }
+                CrmCustomerEntity entity = crmCustomerService.getById(id);
+                assignValueForBeanFields(list,entity);
             }
-            if ("3".equals(label)){
-//                recordList = crmContactsService.queryField(id);
+            if (3 == label){
+                CrmContactsEntity entity = crmContactsService.getById(id);
+                assignValueForBeanFields(list,entity);
             }
             if ("4".equals(label)){
 //                recordList = crmProductService.queryField(id);
@@ -104,8 +84,9 @@ public class SysFieldController {
             if ("5".equals(label)){
 //                recordList = crmBusinessService.queryField(id);
             }
-            if ("6".equals(label)){
-//                recordList = crmContractService.queryField(id);
+            if (6 == label){
+                CrmContractEntity entity = crmContractService.getById(id);
+                assignValueForBeanFields(list,entity);
             }
             if ("7".equals(label)){
 //                recordList = crmReceivablesService.queryField(id);
@@ -125,6 +106,9 @@ public class SysFieldController {
         }
         return R.ok().put("data", list);
     }
+
+
+
 
     /**
      *表单字段校验
@@ -189,4 +173,22 @@ public class SysFieldController {
         return R.ok();
     }
 
+    private void assignValueForBeanFields(List<SysFieldEntity> list, Object bean) {
+        for (SysFieldEntity field : list) {
+            String fieldName = field.getFieldName();
+            try {
+                String value = BeanUtils.getProperty(bean, fieldName);
+                field.setValue(value);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+                continue;
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+                continue;
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+                continue;
+            }
+        }
+    }
 }
